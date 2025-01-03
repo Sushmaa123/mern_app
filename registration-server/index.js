@@ -10,7 +10,7 @@ app.get("/",(req,res)=>{
     res.send("hello world")
 })
 
-mongoose.connect('mongodb://mongo:27017/devops-cloud-users?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://mongo-service:27017/devops-cloud-users?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('MongoDB connected successfully');
   })
