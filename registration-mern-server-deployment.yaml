@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    name: backend
+    type: backend
+spec:
+  template:
+    metadata:
+      name: backend
+      labels:
+        name: backend
+        type: backend
+    spec:
+      containers:
+        - name: backend-cont
+          image: sushmagowda321/mernbackend
+          env:
+            - name: MONGO_URL
+              value: "mongodb://mongo:27017/devops-cloud-users?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh"
+          ports:
+            - containerPort: 5000
+  # replicas: 3
+  selector:
+    matchLabels:
+      type: backend
+    

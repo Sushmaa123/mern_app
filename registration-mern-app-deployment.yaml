@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    name: frontend
+    type: frontend
+spec:
+  template:
+    metadata:
+      name: frontend
+      labels:
+        name: frontend
+        type: frontend
+      containers:
+        - name: frontend-cont
+          image: sushmagowda321/mernfrontend
+          ports:
+            - containerPort: 80
+  # replicas: 3
+  selector:
+    matchLabels:
+      type: frontend
