@@ -18,7 +18,7 @@ spec:
           image: sushmagowda321/mernbackend
           env:
             - name: MONGO_URL
-              value: "mongodb://mongo:27017/devops-cloud-users?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh"
+              value: "mongodb://mongo-service:27017/devops-cloud-users?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh"
           ports:
             - containerPort: 5000
   # replicas: 3
