@@ -12,6 +12,7 @@ spec:
       labels:
         name: frontend
         type: frontend
+    spec:    
       containers:
         - name: frontend-cont
           image: sushmagowda321/mernfrontend
